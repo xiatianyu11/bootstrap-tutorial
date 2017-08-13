@@ -1,0 +1,15 @@
+.customDiv{
+	margin: 3px;
+	min-height: 150px;
+	background-color: silver;
+	text-align: center;
+	font-size: large;
+}
+
+.mainDiv{
+	margin: 3px;
+	min-height: 306px;
+	background-color: silver;
+	text-align: center;
+	font-size: large;
+}
