@@ -18,3 +18,26 @@ json-lib-2.4-jdk15.jar
                     </list>  
                 </property>  
             </bean>  
+
+
+
+
+\jboss-4.2.3.GA\server\default\conf\xmdesc org.jboss.deployment.MainDeployer-xmbean.xml
+最先加载的是后缀名为deployer目录下应用或者服务；
+250:.rar,300:-ds.xml,400:.jar,500:.war,550:.jse,650:.ear,800:.bsh
+<descriptors>
+         <value value="250:.rar,300:-ds.xml,400:.jar,500:.war,550:.jse,650:.ear,800:.bsh"/>
+</descriptors>
+可以通过调整这个value来改变加载规则。
+
+
+解决的方法也很简单： 
+替换掉\server\default\deploy\jboss-spring-jdk5.deployer目录下的spring-2.0.7.jar为新的spring-2.5.6.jar即可。 
+   注：我用的JBOSS版本是4.2.2GA.
+
+
+
+需要注意的是：JBOSS在加载自带的核心JAR之后，将会优先加载下面的两个目录 
+1、D:\jboss\server\default\lib 
+2、D:\jboss\server\default\tmp\deploy 
+其中1会在2之前加载，而目录2是发布某个WAR,EAR,EJB等应用之后生成的临时的jar,这些应用的所有JAR会生成诸如temp*.jar的形式。本文开头提到的错误也就是在目录1中存在一个spring.jar的包，优先于各个应用的spring.jar包。 
