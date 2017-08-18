@@ -6,13 +6,13 @@ jackson-mapper-asl-1.9.12.jar
 json-lib-2.4-jdk15.jar
 
 
-<!-- ÉèÖÃjson×ª»»ÏûÏ¢×ª»»Æ÷£¬²¢ÇÒÉèÖÃsupportedMediaTypes  ·ñÔòÅ×³ö406 -->  
+<!-- è®¾ç½®jsonè½¬æ¢æ¶ˆæ¯è½¬æ¢å™¨ï¼Œå¹¶ä¸”è®¾ç½®supportedMediaTypes  å¦åˆ™æŠ›å‡º406 -->  
             <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">  
                 <property name="supportedMediaTypes">  
                     <list>  
-                        <!-- ÉèÖÃÏìÓ¦Ö§³ÖµÄÀàĞÍ -->  
+                        <!-- è®¾ç½®å“åº”æ”¯æŒçš„ç±»å‹ -->  
                         <value>text/html;charset=UTF-8</value>  
-                        <!-- ÉèÖÃÇëÇóbodyÖ§³ÖµÄÀàĞÍ -->  
+                        <!-- è®¾ç½®è¯·æ±‚bodyæ”¯æŒçš„ç±»å‹ -->  
                         <value>application/x-www-form-urlencoded</value>  
                         <value>application/json;charset=UTF-8</value>  
                     </list>  
@@ -23,21 +23,50 @@ json-lib-2.4-jdk15.jar
 
 
 \jboss-4.2.3.GA\server\default\conf\xmdesc org.jboss.deployment.MainDeployer-xmbean.xml
-×îÏÈ¼ÓÔØµÄÊÇºó×ºÃûÎªdeployerÄ¿Â¼ÏÂÓ¦ÓÃ»òÕß·şÎñ£»
+æœ€å…ˆåŠ è½½çš„æ˜¯åç¼€åä¸ºdeployerç›®å½•ä¸‹åº”ç”¨æˆ–è€…æœåŠ¡ï¼›
 250:.rar,300:-ds.xml,400:.jar,500:.war,550:.jse,650:.ear,800:.bsh
 <descriptors>
          <value value="250:.rar,300:-ds.xml,400:.jar,500:.war,550:.jse,650:.ear,800:.bsh"/>
 </descriptors>
-¿ÉÒÔÍ¨¹ıµ÷ÕûÕâ¸övalueÀ´¸Ä±ä¼ÓÔØ¹æÔò¡£
+å¯ä»¥é€šè¿‡è°ƒæ•´è¿™ä¸ªvalueæ¥æ”¹å˜åŠ è½½è§„åˆ™ã€‚
 
 
-½â¾öµÄ·½·¨Ò²ºÜ¼òµ¥£º 
-Ìæ»»µô\server\default\deploy\jboss-spring-jdk5.deployerÄ¿Â¼ÏÂµÄspring-2.0.7.jarÎªĞÂµÄspring-2.5.6.jar¼´¿É¡£ 
-   ×¢£ºÎÒÓÃµÄJBOSS°æ±¾ÊÇ4.2.2GA.
+è§£å†³çš„æ–¹æ³•ä¹Ÿå¾ˆç®€å•ï¼š 
+æ›¿æ¢æ‰\server\default\deploy\jboss-spring-jdk5.deployerç›®å½•ä¸‹çš„spring-2.0.7.jarä¸ºæ–°çš„spring-2.5.6.jarå³å¯ã€‚ 
+   æ³¨ï¼šæˆ‘ç”¨çš„JBOSSç‰ˆæœ¬æ˜¯4.2.2GA.
 
 
 
-ĞèÒª×¢ÒâµÄÊÇ£ºJBOSSÔÚ¼ÓÔØ×Ô´øµÄºËĞÄJARÖ®ºó£¬½«»áÓÅÏÈ¼ÓÔØÏÂÃæµÄÁ½¸öÄ¿Â¼ 
-1¡¢D:\jboss\server\default\lib 
-2¡¢D:\jboss\server\default\tmp\deploy 
-ÆäÖĞ1»áÔÚ2Ö®Ç°¼ÓÔØ£¬¶øÄ¿Â¼2ÊÇ·¢²¼Ä³¸öWAR,EAR,EJBµÈÓ¦ÓÃÖ®ºóÉú³ÉµÄÁÙÊ±µÄjar,ÕâĞ©Ó¦ÓÃµÄËùÓĞJAR»áÉú³ÉÖîÈçtemp*.jarµÄĞÎÊ½¡£±¾ÎÄ¿ªÍ·Ìáµ½µÄ´íÎóÒ²¾ÍÊÇÔÚÄ¿Â¼1ÖĞ´æÔÚÒ»¸öspring.jarµÄ°ü£¬ÓÅÏÈÓÚ¸÷¸öÓ¦ÓÃµÄspring.jar°ü¡£ 
+éœ€è¦æ³¨æ„çš„æ˜¯ï¼šJBOSSåœ¨åŠ è½½è‡ªå¸¦çš„æ ¸å¿ƒJARä¹‹åï¼Œå°†ä¼šä¼˜å…ˆåŠ è½½ä¸‹é¢çš„ä¸¤ä¸ªç›®å½• 
+1ã€D:\jboss\server\default\lib 
+2ã€D:\jboss\server\default\tmp\deploy 
+å…¶ä¸­1ä¼šåœ¨2ä¹‹å‰åŠ è½½ï¼Œè€Œç›®å½•2æ˜¯å‘å¸ƒæŸä¸ªWAR,EAR,EJBç­‰åº”ç”¨ä¹‹åç”Ÿæˆçš„ä¸´æ—¶çš„jar,è¿™äº›åº”ç”¨çš„æ‰€æœ‰JARä¼šç”Ÿæˆè¯¸å¦‚temp*.jarçš„å½¢å¼ã€‚æœ¬æ–‡å¼€å¤´æåˆ°çš„é”™è¯¯ä¹Ÿå°±æ˜¯åœ¨ç›®å½•1ä¸­å­˜åœ¨ä¸€ä¸ªspring.jarçš„åŒ…ï¼Œä¼˜å…ˆäºå„ä¸ªåº”ç”¨çš„spring.jaråŒ…ã€‚ 
+
+
+
+
+
+accepted
+I just ran into this issue myself.
+
+After upgrading a library in my application, I received the following error on a request:
+
+Exception handling request to /path: java.lang.NoSuchMethodError: com.fasterxml.jackson.core.JsonParser.hasToken(Lcom/fasterxml/jackson/core/JsonToken;)
+Here is how I solved it:
+
+I obviously had to exclude jackson-core-2.5.1 that wildfly-9 provides.
+
+I listed all modules that depend on 'jackson-core' with /opt/wildfly/modules# grep -R 'jackson-core'
+
+Then I created a jboss-deployment-structure.xml in my WEB-INF folder:
+
+<jboss-deployment-structure>
+    <deployment>
+        <exclusions>
+            <module name="com.fasterxml.jackson.core.jackson-core" />
+            <module name="com.fasterxml.jackson.core.jackson-databind" />
+            <module name="com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider" />
+            <module name="org.jboss.resteasy.resteasy-jackson2-provider" />
+        </exclusions>
+    </deployment>
+</jboss-deployment-structure>
