@@ -70,3 +70,6 @@ Then I created a jboss-deployment-structure.xml in my WEB-INF folder:
         </exclusions>
     </deployment>
 </jboss-deployment-structure>
+
+
+http://blog.csdn.net/zxcvqwer19900720/article/details/20999623
